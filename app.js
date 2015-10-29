@@ -29,9 +29,23 @@ function Weapon(options) {
   this.destuctivepower = options.destuctivepower;
 }
 
-var usa = new Country({strength: 1000, name: "USA"});
-var china = new Country({strength: 1000, name: "China"});
+var usa = new Country({
+  strength: 1000,
+  name: "USA"
+});
+
+var china = new Country({
+  strength: 1000,
+  name: "China"
+});
+
 var virginiaClassSub = new Weapon({destuctivepower: 250, name: "Virginia Class Sub"});
 var type092Sub = new Weapon({destuctivepower: 50, name: "Type 092 Sub"});
 usa.arm(virginiaClassSub);
 china.arm(type092Sub);
+
+$('body').on('click', '.amcharts-map-area-US', function() {
+
+this.style.fill = "yellow";
+
+});

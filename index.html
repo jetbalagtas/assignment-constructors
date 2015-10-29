@@ -5,30 +5,115 @@
     <title>World War III</title>
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <!--
+			This map was created using Pixel Map Generator by amCharts and is licensed under the Creative Commons Attribution 4.0 International License.
+			You may use this map the way you see fit as long as proper attribution to the name of amCharts is given in the form of link to http://pixelmap.amcharts.com/
+			To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/
+
+			If you would like to use this map without any attribution, you can acquire a commercial license for the JavaScript Maps - a tool that was used to produce this map.
+			To do so, visit amCharts Online Store: http://www.amcharts.com/online-store/
+		-->
+
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/ammap.js"></script>
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("map",{
+					"type": "map",
+					"pathToImages": "http://www.amcharts.com/lib/3/images/",
+					"addClassNames": true,
+					"fontSize": 15,
+					"color": "#FFFFFF",
+					"backgroundAlpha": 1,
+					"backgroundColor": "rgba(80,80,80,1)",
+					"dataProvider": {
+						"map": "worldLow",
+						"getAreasFromMap": true,
+						"images": [
+							{
+								"top": 40,
+								"left": 60,
+								"width": 80,
+								"height": 40,
+								"pixelMapperLogo": true,
+								"imageURL": "http://pixelmap.amcharts.com/static/img/logo.svg",
+								"url": "http://www.amcharts.com"
+							}
+						]
+					},
+					"balloon": {
+						"horizontalPadding": 15,
+						"borderAlpha": 0,
+						"borderThickness": 1,
+						"verticalPadding": 15
+					},
+					"areasSettings": {
+						"color": "rgba(129,129,129,1)",
+						"outlineColor": "rgba(80,80,80,1)",
+						"rollOverOutlineColor": "rgba(80,80,80,1)",
+						"rollOverBrightness": 20,
+						"selectedBrightness": 20,
+						"selectable": true,
+						"unlistedAreasAlpha": 0,
+						"unlistedAreasOutlineAlpha": 0
+					},
+					"imagesSettings": {
+						"alpha": 1,
+						"color": "rgba(129,129,129,1)",
+						"outlineAlpha": 0,
+						"rollOverOutlineAlpha": 0,
+						"outlineColor": "rgba(80,80,80,1)",
+						"rollOverBrightness": 20,
+						"selectedBrightness": 20,
+						"selectable": true
+					},
+					"linesSettings": {
+						"color": "rgba(129,129,129,1)",
+						"selectable": true,
+						"rollOverBrightness": 20,
+						"selectedBrightness": 20
+					},
+					"zoomControl": {
+						"zoomControlEnabled": true,
+						"homeButtonEnabled": false,
+						"panControlEnabled": false,
+						"right": 38,
+						"bottom": 30,
+						"minZoomLevel": 0.25,
+						"gridHeight": 100,
+						"gridAlpha": 0.1,
+						"gridBackgroundAlpha": 0,
+						"gridColor": "#FFFFFF",
+						"draggerAlpha": 1,
+						"buttonCornerRadius": 2
+					}
+				});
+		</script>
   </head>
-  <body>
-    <header>
-      World War III (or not?)
-    </header>
-    <div class="sub-title">
-      <h1>When TSHTFAEGTH</h1>
+  <body style="margin: 0;background-color: rgba(80,80,80,1);">
+		<div id="map" style="width: 100%; height: 695px;"></div>
+    <div class="container">
+      <h1>World War III (or not?)<br>
+        <small><small>When TSHTFAEGTH</small></small></h1>
+        <section class="intro">
+          <p>
+            China and the United States have been at odds over several international and domestic disputes. From
+        cyberwarfare, trade deficits, to human rights, and to China's open agression in Southeast Asia, where it has built military installations on sparse islands whose ownership is contested by several ASEAN countries such as Vietnam, Japan, Philippines, Indonesia, and Malaysia.
+          </p>
+
+          <p>
+            Tensions have never been greater. Exacerbating the situation is China's muscle-flexing and widely reported bullying of it's much smaller and less powerful neighbors. It's navy ships agressively maneuvering to collide with the smaller fishing boats of it's neighbors and warning them over loudspeaker and radio calls to that they are tresspassing on Chinese waters, these incidents have been growing by the number. Even U.S. military spy planes flying in the area, an international zone, have been warned by the Chinese bases over radio.
+          </p>
+
+          <p>
+            Now, the United States is challenging the Asian bully by sending a battleship in those international waters, purportedly to ensure free navigation of the seas both for navies, private, and commercial vessels.
+          </p>
+
+          <h2>The question is, if tensions escalate and shooting breaks out, who wins?</h2>
+        </section>
     </div>
-    <section class="intro">
-      <p>
-        China and the United States have been at odds over several international and domestic disputes. From
-    cyberwarfare, trade deficits, to human rights, and to China's open agression in Southeast Asia, where it has built military installations on sparse islands whose ownership is contested by several ASEAN countries such as Vietnam, Japan, Philippines, Indonesia, and Malaysia.
-      </p>
-
-      <p>
-        Tensions have never been greater. Exacerbating the situation is China's muscle-flexing and widely reported bullying of it's much smaller and less powerful neighbors. It's navy ships agressively maneuvering to collide with the smaller fishing boats of it's neighbors and warning them over loudspeaker and radio calls to that they are tresspassing on Chinese waters, these incidents have been growing by the number. Even U.S. military spy planes flying in the area, an international zone, have been warned by the Chinese bases over radio.
-      </p>
-
-      <p>
-        Now, the United States is challenging the Asian bully by sending a battleship in those international waters, purportedly to ensure free navigation of the seas both for navies, private, and commercial vessels.
-      </p>
-
-      <h2>The question is, if tensions escalate and shooting breaks out, who wins? Or who loses their face?</h2>
-    </section>
 
 
     <!-- lib files -->
@@ -36,6 +121,7 @@
     <script src="bower_components/underscore/underscore.js"></script>
 
     <!-- app files -->
+    <script src="data.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
