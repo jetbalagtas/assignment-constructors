@@ -6,125 +6,142 @@
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
-    <!--
-			This map was created using Pixel Map Generator by amCharts and is licensed under the Creative Commons Attribution 4.0 International License.
-			You may use this map the way you see fit as long as proper attribution to the name of amCharts is given in the form of link to http://pixelmap.amcharts.com/
-			To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/
-
-			If you would like to use this map without any attribution, you can acquire a commercial license for the JavaScript Maps - a tool that was used to produce this map.
-			To do so, visit amCharts Online Store: http://www.amcharts.com/online-store/
-		-->
+    <!-- Map obtained courtesy of amCharts: http://pixelmap.amcharts.com/ -->
 
 		<!-- amCharts javascript sources -->
 		<script type="text/javascript" src="http://www.amcharts.com/lib/3/ammap.js"></script>
 		<script type="text/javascript" src="http://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
 
-		<!-- amCharts javascript code -->
-		<script type="text/javascript">
-			AmCharts.makeChart("map",{
-					"type": "map",
-					"pathToImages": "http://www.amcharts.com/lib/3/images/",
-					"addClassNames": true,
-					"fontSize": 15,
-					"color": "#FFFFFF",
-					"backgroundAlpha": 1,
-					"backgroundColor": "rgba(80,80,80,1)",
-					"dataProvider": {
-						"map": "worldLow",
-						"getAreasFromMap": true,
-						"images": [
-							{
-								"top": 40,
-								"left": 60,
-								"width": 80,
-								"height": 40,
-								"pixelMapperLogo": true,
-								"imageURL": "http://pixelmap.amcharts.com/static/img/logo.svg",
-								"url": "http://www.amcharts.com"
-							}
-						]
-					},
-					"balloon": {
-						"horizontalPadding": 15,
-						"borderAlpha": 0,
-						"borderThickness": 1,
-						"verticalPadding": 15
-					},
-					"areasSettings": {
-						"color": "rgba(129,129,129,1)",
-						"outlineColor": "rgba(80,80,80,1)",
-						"rollOverOutlineColor": "rgba(80,80,80,1)",
-						"rollOverBrightness": 20,
-						"selectedBrightness": 20,
-						"selectable": true,
-						"unlistedAreasAlpha": 0,
-						"unlistedAreasOutlineAlpha": 0
-					},
-					"imagesSettings": {
-						"alpha": 1,
-						"color": "rgba(129,129,129,1)",
-						"outlineAlpha": 0,
-						"rollOverOutlineAlpha": 0,
-						"outlineColor": "rgba(80,80,80,1)",
-						"rollOverBrightness": 20,
-						"selectedBrightness": 20,
-						"selectable": true
-					},
-					"linesSettings": {
-						"color": "rgba(129,129,129,1)",
-						"selectable": true,
-						"rollOverBrightness": 20,
-						"selectedBrightness": 20
-					},
-					"zoomControl": {
-						"zoomControlEnabled": true,
-						"homeButtonEnabled": false,
-						"panControlEnabled": false,
-						"right": 38,
-						"bottom": 30,
-						"minZoomLevel": 0.25,
-						"gridHeight": 100,
-						"gridAlpha": 0.1,
-						"gridBackgroundAlpha": 0,
-						"gridColor": "#FFFFFF",
-						"draggerAlpha": 1,
-						"buttonCornerRadius": 2
-					}
-				});
-		</script>
+    <!-- amCharts javascript code -->
+    <script type="text/javascript">
+      AmCharts.makeChart("map",{
+          "type": "map",
+          "pathToImages": "http://www.amcharts.com/lib/3/images/",
+          "addClassNames": true,
+          "fontSize": 15,
+          "color": "#FFFFFF",
+          "backgroundAlpha": 1,
+          "backgroundColor": "rgba(80,80,80,1)",
+          "dataProvider": {
+            "map": "worldLow",
+            "getAreasFromMap": true,
+            "images": [
+              {
+                "top": 40,
+                "left": 60,
+                "width": 80,
+                "height": 40,
+                "pixelMapperLogo": true,
+                "imageURL": "http://pixelmap.amcharts.com/static/img/logo.svg",
+                "url": "http://www.amcharts.com"
+              }
+            ]
+          },
+          "balloon": {
+            "horizontalPadding": 15,
+            "borderAlpha": 0,
+            "borderThickness": 1,
+            "verticalPadding": 15
+          },
+          "areasSettings": {
+            "color": "rgba(129,129,129,1)",
+            "outlineColor": "rgba(80,80,80,1)",
+            "rollOverOutlineColor": "rgba(80,80,80,1)",
+            "rollOverBrightness": 20,
+            "selectedBrightness": 20,
+            "selectable": true,
+            "unlistedAreasAlpha": 0,
+            "unlistedAreasOutlineAlpha": 0
+          },
+          "imagesSettings": {
+            "alpha": 1,
+            "color": "rgba(129,129,129,1)",
+            "outlineAlpha": 0,
+            "rollOverOutlineAlpha": 0,
+            "outlineColor": "rgba(80,80,80,1)",
+            "rollOverBrightness": 20,
+            "selectedBrightness": 20,
+            "selectable": true
+          },
+          "linesSettings": {
+            "color": "rgba(129,129,129,1)",
+            "selectable": true,
+            "rollOverBrightness": 20,
+            "selectedBrightness": 20
+          },
+          "zoomControl": {
+            "zoomControlEnabled": true,
+            "homeButtonEnabled": false,
+            "panControlEnabled": false,
+            "right": 38,
+            "bottom": 30,
+            "minZoomLevel": 0.25,
+            "gridHeight": 100,
+            "gridAlpha": 0.1,
+            "gridBackgroundAlpha": 0,
+            "gridColor": "#FFFFFF",
+            "draggerAlpha": 1,
+            "buttonCornerRadius": 2
+          }
+        });
+    </script>
   </head>
-  <body style="margin: 0;background-color: rgba(80,80,80,1);">
-		<div id="map" style="width: 100%; height: 695px;"></div>
+  <body>
 
     <div class="container">
       <section class="intro">
+
+        <!-- The story, based on real events... -->
         <h1>TEOTWAWKI<br>
           <small>A Shooting War Between the U.S. and China</small></h1>
             <p>
               China and the United States have been at odds over several international and domestic disputes. From
-          cyberwarfare, trade deficits, to human rights, and to China's open agression in Southeast Asia, where it has built military installations on sparse islands whose ownership is contested by several ASEAN countries such as Vietnam, Japan, Philippines, Indonesia, and Malaysia.
+          cyberwarfare, trade deficits, to human rights, and to China's open agression in Southeast Asia, where it has built military installations on hotly disputed sparse islands whose ownership is contested by several ASEAN countries such as Vietnam, Japan, Philippines, Indonesia, and Malaysia.
             </p>
 
             <p>
-              Tensions have never been greater. Exacerbating the situation is China's muscle-flexing and widely reported bullying of it's much smaller and less powerful neighbors. It's navy ships agressively maneuvering to collide with the smaller fishing boats of it's neighbors and warning them over loudspeaker and radio calls to that they are tresspassing on Chinese waters, these incidents have been growing by the number. Even U.S. military spy planes flying in the area, an international zone, have been warned by the Chinese bases over radio.
+              Tensions have never been greater. Exacerbating the situation is China's muscle-flexing and widely reported 'bullying' of it's much smaller and less powerful neighbors. It's navy ships agressively maneuver to collide with the smaller fishing boats of it's neighbors, warning them over loudspeaker and radio calls that they are tresspassing on Chinese waters. These incidents have been growing in number. Even U.S. military spy planes flying in the established international zone, have been warned by the Chinese bases over radio about flying over Chinese airspace.
             </p>
 
             <p>
-              Now, the United States is challenging the Asian bully by sending a battleship in those international waters, purportedly to ensure free navigation of the seas both for navies, private, and commercial vessels.
+              Now, the United States is challenging China's misplaced resolve by sending a battleship in those international waters. The mission is to ensure free navigation of the seas for all ships including all navies, private, and commercial vessels.
+            </p>
+
+            <p>
+              The United States has the most powerful naval force in the world. It has 10 Carrier Strike Groups. 3 of which are contantly at sea for ready deployment and projection of power. These CSGs have a phalanx of ships including 1 aircraft carrier a host of attack and defense frigates, destroyers, battleships, and a couple of nuclear powered submarines.
+            </p>
+
+            <p>
+              China on the other hand, has been struggling to match the naval power of the United States, even if only in photo ops where they display the only aircraft carrier they have which is an old refurbished one they bought from the former Soviet Union. It, together with out-of-place ships in photos the Chinese government released have impressed the untrained eye. But to the acutely aware and savvy military watcher, China has revealed a glaring weakness, incompetence of its commanders, or just plain theatrics of its political rulers.
+            </p>
+
+            <p>
+              It remains to be seen if China's reckless actions will be backed up by their chain of command, should an incident occur that normally would represent an act of war.
+            </p>
+
+            <p>
+              Certainly, the U.S. and its allies are watching closely.
             </p>
 
             <h2><small>What happens if shooting breaks out?</small></h2>
-      </section>
 
-      <section class="start-btn">
-        <button type="button" class="btn btn-warning">Start a War?</button>
-      </section>
-
-      <section class="strike-btns">
-        <button type="button" class="btn btn-primary strike-btn">U.S. Strike China</button>
-        <button type="button" class="btn btn-danger strike-btn">China Strike U.S.</button>
+            <!-- Call-to-Action / Play button -->
+            <section class="start-btn">
+              <button type="button" class="btn btn-warning">Play TEOTWAWKI</button>
+            </section>
       </section>
     </div>
+
+    <!-- World Map -->
+    <div class="world-map hidden">
+      <div id="map" style="width: 100%; height: 695px;"></div>
+    </div>
+
+    <!-- stike/game buttons -->
+    <section class="strike-btns hidden">
+      <button type="button" class="btn btn-primary us-strike-btn">U.S. Strike China</button>
+      <button type="button" class="btn btn-danger china-strike-btn">China Strike U.S.</button>
+    </section>
 
 
     <!-- lib files -->

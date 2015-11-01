@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: #505050; }
 
 .container {
   width: 75%;
@@ -24,8 +25,9 @@ p {
   text-align: center;
   margin-bottom: 40px; }
 
-.strike-btn {
-  display: inline-block;
-  margin: auto;
+.strike-btns {
   text-align: center;
   margin-bottom: 40px; }
+
+a {
+  display: none; }

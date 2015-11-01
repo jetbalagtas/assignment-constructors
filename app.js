@@ -1,11 +1,11 @@
 $(document).ready(function () {
-  ww3.init ();
+  teotwawki.init ();
 });
 
-var ww3 = {
+var teotwawki = {
   init: function() {
-    // ww3.styling();
-    ww3.events();
+    // teotwawki.styling();
+    teotwawki.events();
   },
   events: function() {
     $('body').on('click', '.amcharts-map-area-US', function(event) {
@@ -40,17 +40,21 @@ var ww3 = {
       console.log(randomInt);
       if(randomInt < 15) {
         china.strength -= usa.weapon.destuctivepower;
+        usStrikeChina();
         console.log("Strength:", china.strength);
         if(china.strength <= 999 && china.strength >= 699) {
           this.style.fill = "yellow";
+          usStrikeChina();
           console.log(china.name + " was hit!" + " Strength is now at " + china.strength + ".");
         }
         if(china.strength <= 698 && china.strength >= 399) {
           this.style.fill = "orange";
+          usStrikeChina();
           console.log(china.name + " was hit again!! Almost half of the population has been wiped out! Respond or suffer more casualties! Strength is now at " + china.strength + ".");
         }
         if(china.strength <= 398 && china.strength >= 1) {
           this.style.fill = "red";
+          usStrikeChina();
           console.log("WARNING: " + china.name + " was hit again and is nearing annihilation! Respond or die! Strength is now at " + china.strength + ".");
         }
         if(china.strength <= 0){
@@ -64,6 +68,8 @@ var ww3 = {
     });
     $('.start-btn').on('click', 'button', function (event) {
       $('.intro').addClass('hidden');
+      $('.world-map').removeClass('hidden');
+      $('.strike-btns').removeClass('hidden');
     });
   }
 };
@@ -73,26 +79,13 @@ var opts = {
   strength: 100000
 };
 
-function Country (options) {
-  var options = options || {};
+function Country (choices) {
+  var options = choices || {};
   this.name = options.name || "Random Country";
   this.strength = options.strength;
   this.arm = function(weapon) {
     this.weapon = weapon;
   };
-  // this.strike = function (adversary) {
-  //   var randomInt = Math.floor(Math.random() * 20);
-  //   if(randomInt < 15) {
-  //     adversary.strength -= this.weapon.destuctivepower;
-  //     console.log(adversary.name + " was hit!" + " Strength is now at " + adversary.strength);
-  //     if(adversary.strength <= 0){
-  //       adversary.strength = 0;
-  //       console.log(adversary.name + " has been destroyed. No more " + adversary.name + ".");
-  //     }
-  //   } else {
-  //     console.log("Save lives, reestablish diplomatic relations " + adversary.name + ".");
-  //   }
-  // };
 }
 
 function Weapon(options) {
