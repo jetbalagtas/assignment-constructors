@@ -117,6 +117,7 @@ var teotwawki = {
     $('.start-btn').on('click', 'button', function (event) {
       $('.intro').addClass('hidden');
       $('.world-map').removeClass('hidden');
+      $('.progress-message').removeClass('hidden');
       $('.strike-btns').removeClass('hidden');
     });
   }
