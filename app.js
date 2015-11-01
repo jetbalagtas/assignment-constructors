@@ -2,6 +2,12 @@ $(document).ready(function () {
   teotwawki.init ();
 });
 
+function usStrikeChina () {
+  $('.us-strike-btn').on('click', function (event) {
+    $('body').trigger('click', '.amcharts-map-area-CN');
+  });
+}
+
 var teotwawki = {
   init: function() {
     // teotwawki.styling();
@@ -13,7 +19,6 @@ var teotwawki = {
       console.log(randomInt);
       if(randomInt < 15) {
         usa.strength -= china.weapon.destuctivepower;
-        console.log("Strength:", usa.strength);
         if(usa.strength <= 999 && usa.strength >= 699) {
           this.style.fill = "yellow";
           console.log(usa.name + " was hit!" + " Strength is now at " + usa.strength + ".");
@@ -41,7 +46,6 @@ var teotwawki = {
       if(randomInt < 15) {
         china.strength -= usa.weapon.destuctivepower;
         usStrikeChina();
-        console.log("Strength:", china.strength);
         if(china.strength <= 999 && china.strength >= 699) {
           this.style.fill = "yellow";
           usStrikeChina();
